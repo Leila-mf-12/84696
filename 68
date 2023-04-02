@@ -1,0 +1,22 @@
+int  AkkermanFunction ( int  m , int  n )
+{
+    если ( м  ==  0 )
+    {
+        вернуть  n  +  1 ; // база
+    }
+    иначе,  если ( n  ==  0 )
+    {
+        вернуть  AkkermanFunction ( m  -  1 , 1 ); // база
+    }
+    еще 
+    {
+        return  AkkermanFunction ( m  -  1 , AkkermanFunction ( m , n  -  1 ));
+    }
+}
+Консоль . Очистить ();
+Консоль . WriteLine ( " Введите первое число: " );
+int  м  =  Преобразовать . ToInt32 ( Консоль.ReadLine ( )) ;
+Консоль . WriteLine ( " Введите второе число: " );
+int  n  =  конвертировать . ToInt32 ( Консоль.ReadLine ( )) ;
+
+Консоль . WriteLine ( AkkermanFunction ( m , n ));
